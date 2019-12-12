@@ -7,6 +7,7 @@ The repository has been created from phy1-plugins and made compatible with Phy2 
 * Reclustering. Reclustering with KlustaKwik 2.0 - dependent on a local version of KlustaKwik, which is provided in the zip file for Windows 10) and python package: pandas. To install write “pip install pandas” in the terminal in your phy environment.
 * Outlier removal using the Mahalanobis distance. Standard threshold is 16 standard deviations (adjustable threshold).
 * K-means clustering. Standard separation into clusters (adjustable number).
+* visualization for spikes violating the refractory period and a filter for the raw traces.
 
 All new features are accessible from the top menu labeled clustering.
 

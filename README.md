@@ -14,8 +14,9 @@ All new features are accessible from the top menu labeled clustering.
 ControllerSettings also allows you to adjust the number of spike displayed i FeatureView (increased to 15,000) and WaveformView (standard: 300). I recommend to delete the local .phy folder in your data folder, when adjusting these parameters.
 
 ## Installation 
-To install, place the content in your plugins directory (~/.phy/), replacing the existing files and plugins folder.
-Installl the python package panda: write “pip install pandas” in the terminal from your phy environment.
+* place the content in your plugins directory (~/.phy/), replacing the existing files and plugins folder.
+* Installl the python package panda: write “pip install pandas” in the terminal from your phy environment.
+* Copy 'tempdir.py' in "*YourPhyDirectory*/phy/utils".
 
 ## How to cite
 Please use below DOI for citing these plugins.

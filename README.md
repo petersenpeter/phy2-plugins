@@ -15,6 +15,7 @@ ControllerSettings also allows you to adjust the number of spike displayed i Fea
 
 ## Installation 
 To install, place the content in your plugins directory (~/.phy/), replacing the existing files and plugins folder.
+Installl the python package panda: write “pip install pandas” in the terminal from your phy environment.
 
 ## How to cite
 Please use below DOI for citing these plugins.

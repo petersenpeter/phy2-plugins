@@ -19,6 +19,8 @@ ControllerSettings also allows you to adjust the number of spike displayed i Fea
 * Installl the python package panda: write “pip install pandas” in the terminal from your phy environment.
 * Copy 'tempdir.py' in "*YourPhyDirectory*/phy/utils". The exact path can be found in the error message from phy you will receive when this step has not been completed.
 
+For the time being, you will also have to find the path to your phy installation and copy 'tempdir.py' to *~YourPhyPath*/phy/utils.
+
 ## How to cite
 Please use below DOI for citing these plugins.
 

@@ -21,6 +21,9 @@ ControllerSettings also allows you to adjust the number of spike displayed i Fea
 
 For the time being, you will also have to find the path to your phy installation and copy 'tempdir.py' to *~YourPhyPath*/phy/utils.
 
+### Known issue
+If you receive the following error after installation: 'GUI' object has no attribute 'edit_actions' replace SplitShortISI.py with SplitShortISI_v2.py.
+
 ## How to cite
 Please use below DOI for citing these plugins.
 

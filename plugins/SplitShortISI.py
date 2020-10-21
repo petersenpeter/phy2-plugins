@@ -12,7 +12,8 @@ class SplitShortISI(IPlugin):
     def attach_to_controller(self, controller):
         @connect
         def on_gui_ready(sender, gui):
-            @gui.edit_actions.add(shortcut='alt+i')
+            #@gui.edit_actions.add(shortcut='alt+i')
+            @controller.supervisor.actions.add(shortcut='alt+i')
             def VisualizeShortISI():
                 """Split all spikes with an interspike interval of less than 1.5 ms into a separate
                 cluster. THIS IS FOR VISUALIZATION ONLY, it will show you where potential noise

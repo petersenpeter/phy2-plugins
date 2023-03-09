@@ -45,8 +45,19 @@ class CustomActionPlugin(IPlugin):
             @controller.supervisor.actions.add(shortcut='ctrl+v')
             def move_selected_to_end():
 
-                logger.warn("Moving cluster to end")
+                logger.warn("Moving selected cluster to end")
                 selected = controller.supervisor.selected
                 s = controller.supervisor.clustering.spikes_in_clusters(selected)
                 outliers2 = np.ones(len(s),dtype=int)
                 controller.supervisor.actions.split(s,outliers2)
+
+            
+            @controller.supervisor.actions.add(shortcut='ctrl+b')
+            def move_similar_to_end():
+
+                logger.warn("Moving selected similar cluster to end")
+                sim = controller.supervisor.selected_similar
+                s = controller.supervisor.clustering.spikes_in_clusters(sim)
+                outliers2 = np.ones(len(s),dtype=int)
+                controller.supervisor.actions.split(s,outliers2)
+            

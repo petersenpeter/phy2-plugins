@@ -65,7 +65,9 @@ class Recluster(IPlugin):
                 """Relaunch KlustaKwik on selected clusters."""
                 # Selected clusters.
                 cluster_ids = controller.supervisor.selected
-                spike_ids = controller.selector.select_spikes(cluster_ids)
+                #spike_ids = controller.selector.select_spikes(cluster_ids)
+                bunchs = controller._amplitude_getter(cluster_ids, name='template', load_all=True)
+                spike_ids = bunchs[0].spike_ids
                 logger.info("Running KlustaKwik on %d spikes.", len(spike_ids))
                 # s = controller.supervisor.clustering.spikes_in_clusters(cluster_ids)
                 data3 = controller.model._load_features().data[spike_ids]
@@ -138,7 +140,9 @@ class Recluster(IPlugin):
                 """Relaunch KlustaKwik on selected clusters."""
                 # Selected clusters.
                 cluster_ids = controller.supervisor.selected
-                spike_ids = controller.selector.select_spikes(cluster_ids)
+                #spike_ids = controller.selector.select_spikes(cluster_ids)
+                bunchs = controller._amplitude_getter(cluster_ids, name='template', load_all=True)
+                spike_ids = bunchs[0].spike_ids
                 logger.info("Running KlustaKwik on %d spikes.", len(spike_ids))
                 # s = controller.supervisor.clustering.spikes_in_clusters(cluster_ids)
                 data3 = controller.model._load_features().data[spike_ids]
@@ -189,10 +193,11 @@ class Recluster(IPlugin):
 
                 """
                 logger.warn("Running K-means clustering")
-                
-                cluster_ids = controller.supervisor.selected
 
-                spike_ids = controller.selector.select_spikes(cluster_ids)
+                cluster_ids = controller.supervisor.selected
+                #spike_ids = controller.selector.select_spikes(cluster_ids)
+                bunchs = controller._amplitude_getter(cluster_ids, name='template', load_all=True)
+                spike_ids = bunchs[0].spike_ids
                 s = controller.supervisor.clustering.spikes_in_clusters(cluster_ids)
                 data = controller.model._load_features()
                 data3 = data.data[spike_ids]
@@ -239,7 +244,9 @@ class Recluster(IPlugin):
                     return d
 
                 cluster_ids = controller.supervisor.selected
-                spike_ids = controller.selector.select_spikes(cluster_ids)
+                #spike_ids = controller.selector.select_spikes(cluster_ids)
+                bunchs = controller._amplitude_getter(cluster_ids, name='template', load_all=True)
+                spike_ids = bunchs[0].spike_ids
                 s = controller.supervisor.clustering.spikes_in_clusters(cluster_ids)
                 data = controller.model._load_features()
                 data3 = data.data[spike_ids]

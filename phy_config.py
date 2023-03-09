@@ -17,5 +17,5 @@ except:
 
 c = get_config()
 c.Plugins.dirs = [r'~/.phy/plugins/']
-c.TemplateGUI.plugins = ['Recluster','RawDataFilterPlugin','SplitShortISI'] 
+c.TemplateGUI.plugins = ['Recluster','RawDataFilterPlugin','CustomActionPlugin','SplitShortISI'] 
 # ['AmplitudeHistogram','ControllerSettings','Recluster','Export2neurosuite'] # c.KwikGUI.plugins = ['ControllerSettingsKwik']

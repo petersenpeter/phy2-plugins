@@ -1,4 +1,3 @@
-
 # You can also put your plugins in ~/.phy/plugins/.
 
 from phy import IPlugin
@@ -8,15 +7,17 @@ try:
 except:
     pass
 
-# Plugin example:
-#
-# class MyPlugin(IPlugin):
-#     def attach_to_cli(self, cli):
-#         # you can create phy subcommands here with click
-#         pass
-
 c = get_config()
+
+# Plugin directories
 c.Plugins.dirs = [r'~/.phy/plugins/']
 
-c.TemplateGUI.plugins = ['Recluster','RawDataFilterPlugin','CustomActionPlugin','SplitShortISI'] 
-# ['AmplitudeHistogram','ControllerSettings','Recluster','Export2neurosuite'] # c.KwikGUI.plugins = ['ControllerSettingsKwik']
+# Configure GUI plugins
+c.TemplateGUI.plugins = [
+    'ReclusterMingze',
+    'RawDataFilterPlugin',
+    'CustomActionPlugin',
+    'ImprovedISIAnalysisMingze',
+    'GoodLabelsPlugin',
+    'StableMahalanobisDetectionMingze'
+]

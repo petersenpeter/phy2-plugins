@@ -1,30 +1,37 @@
 # Plugins to Phy2
-These plugins add additional features to Phy2
-
-The repository has been created from phy1-plugins and made compatible with Phy2 by Thomas Hainmueller. 
+These plugins add additional features to Phy2. Originally created for Phy1 by Peter Petersen and made compatible with Phy2 by Thomas Hainmueller. Newly updated implementations made by Mingze Dou.
 
 ## Features
-* Reclustering. Reclustering with KlustaKwik 2.0 - dependent on a local version of KlustaKwik, which is provided in the zip file for Windows 10) and python package: pandas. To install write “pip install pandas” in the terminal in your phy environment.
-* Outlier removal using the Mahalanobis distance. Standard threshold is 16 standard deviations (adjustable threshold).
-* K-means clustering. Standard separation into clusters (adjustable number).
-* visualization for spikes violating the refractory period and a filter for the raw traces.
 
-All new features are accessible from the top menu labeled clustering.
+### Newly Updated Features 
+* **ImprovedISIAnalysis** (`alt+i`): Detects ISI conflicts using multiple metrics
+* **StableMahalanobisDetection** (`alt+x`): Outlier detection with interactive visualization
+* **ReclusterUMAP** (`alt+k`): Modern reclustering using UMAP and template matching
+* **GoodLabelsPlugin**: Improved cluster organization that sorts by quality (good > mua > noise). Provides better workflow organization despite Phy's real-time update limitations.
 
-## ControllerSettings - Extra columns in ClusterView (not implemented yet)
-ControllerSettings also allows you to adjust the number of spike displayed i FeatureView (increased to 15,000) and WaveformView (standard: 300). I recommend to delete the local .phy folder in your data folder, when adjusting these parameters.
+### Legacy Features
+* **Reclustering** (`alt+shift+k`, `alt+shift+t`): KlustaKwik 2.0 based reclustering
+* **Mahalanobis Distance** (`alt+shift+x`): Outlier detection (threshold: 16 std)
+* **K-means Clustering** (`alt+shift+q`): Basic clustering with adjustable clusters
+* **ISI Violation** (`alt+shift+i`): Visualize refractory period violations
+
+## Dependencies
+```bash
+pip install pandas numpy scipy scikit-learn umap-learn
+```
 
 ## Installation 
-* place the content in your plugins directory (~/.phy/), replacing the existing files and plugins folder.
-* Installl the python package panda: write “pip install pandas” in the terminal from your phy environment.
-* Copy 'tempdir.py' in "*YourPhyDirectory*/phy/utils". The exact path can be found in the error message from phy you will receive when this step has not been completed.
+1. Place files in `~/.phy/` plugins directory
+2. Install dependencies
+3. Copy 'tempdir.py' to "*YourPhyDirectory*/phy/utils"
 
-For the time being, you will also have to find the path to your phy installation and copy 'tempdir.py' to *~YourPhyPath*/phy/utils.
+## Authors
+- Original Phy1: Peter Petersen
+- Phy2 compatibility: Thomas Hainmueller
+- New implementations: Mingze Dou
 
-### Known issue
-If you receive the following error after installation: 'GUI' object has no attribute 'edit_actions' replace SplitShortISI.py with SplitShortISI_v2.py (both files located in the plugins folder).
+## How to Cite
+[![DOI](https://zenodo.org/badge/126424002.svg)](https://zenodo.org/badge/latestdoi/126424002)
+```
 
-## How to cite
-Please use below DOI for citing these plugins.
-
-<a href="https://zenodo.org/badge/latestdoi/126424002"><img src="https://zenodo.org/badge/126424002.svg" alt="DOI"></a>
+Is this more what you were looking for? It's much more concise while retaining all the essential information.

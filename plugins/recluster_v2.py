@@ -11,7 +11,7 @@ import umap
 logger = logging.getLogger('phy')
 
 
-class ReclusterMingze(IPlugin):
+class ReclusterUMAP(IPlugin):
     """
     Modern spike sorting plugin with optimized performance and intelligent merging
     """

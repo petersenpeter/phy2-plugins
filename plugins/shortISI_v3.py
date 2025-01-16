@@ -8,7 +8,7 @@ from scipy.spatial.distance import cdist
 logger = logging.getLogger('phy')
 
 
-class ImprovedISIAnalysisMingze(IPlugin):
+class ImprovedISIAnalysis(IPlugin):
     """More reliable spike analysis using combined metrics"""
 
     def __init__(self):

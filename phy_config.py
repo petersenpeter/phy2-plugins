@@ -16,8 +16,11 @@ c.Plugins.dirs = [r'~/.phy/plugins/']
 c.TemplateGUI.plugins = [
     'CustomActionPlugin',
     'GoodLabelsPlugin',
-    'StableMahalanobisDetectionMingze',
     'RawDataFilterPlugin',
-    'ReclusterMingze',
-    'ImprovedISIAnalysisMingze',
+    'SplitShortISI'
+    'Recluster'
+    
+    'StableMahalanobisDetection',
+    'ReclusterUMAP',
+    'ImprovedISIAnalysis',
 ]

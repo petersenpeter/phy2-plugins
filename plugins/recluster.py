@@ -35,7 +35,7 @@ class Recluster(IPlugin):
         #@controller.supervisor.connect
         #def on_create_cluster_views():
         def on_gui_ready(sender,gui):
-            @controller.supervisor.actions.add(shortcut='alt+k')
+            @controller.supervisor.actions.add(shortcut='alt+shift+k')
             def Recluster_Local_PCAs():
                 def write_fet(fet, filepath):
                     with open(filepath, 'w') as fd:
@@ -110,7 +110,7 @@ class Recluster(IPlugin):
                 controller.supervisor.actions.split(spike_ids, spike_clusters)
                 logger.warn("Reclustering complete!")
 
-            @controller.supervisor.actions.add(shortcut='alt+t')
+            @controller.supervisor.actions.add(shortcut='alt+shift+t')
             def Recluster_Global_PCAs():
                 def write_fet(fet, filepath):
                     with open(filepath, 'w') as fd:
@@ -185,7 +185,7 @@ class Recluster(IPlugin):
                 controller.supervisor.actions.split(spike_ids, spike_clusters)
                 logger.warn("Reclustering complete!")
 
-            @controller.supervisor.actions.add(shortcut='alt+q', prompt=True, prompt_default=lambda: 2)
+            @controller.supervisor.actions.add(shortcut='alt+shift+q', prompt=True, prompt_default=lambda: 2)
             def K_means_clustering(kmeanclusters):
                 """Select number of clusters.
 
@@ -208,7 +208,7 @@ class Recluster(IPlugin):
                 logger.warn("K means clustering complete")
 
             #@controller.supervisor.actions.add(shortcut='alt+x')
-            @controller.supervisor.actions.add(shortcut='alt+x', prompt=True, prompt_default=lambda: 14)
+            @controller.supervisor.actions.add(shortcut='alt+shift+x', prompt=True, prompt_default=lambda: 14)
             def MahalanobisDist(thres_in):
                 """Select threshold in STDs.
 

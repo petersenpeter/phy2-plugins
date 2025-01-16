@@ -13,7 +13,7 @@ import seaborn as sns
 logger = logging.getLogger('phy')
 
 
-class StableMahalanobisDetectionMingze(IPlugin):
+class StableMahalanobisDetection(IPlugin):
     def __init__(self):
         super(StableMahalanobisDetectionMingze, self).__init__()
         self._shortcuts_created = False

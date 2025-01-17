@@ -17,7 +17,7 @@ class ReclusterUMAP(IPlugin):
     """
 
     def __init__(self):
-        super(ReclusterMingze, self).__init__()
+        super(ReclusterUMAP, self).__init__()
         self._shortcuts_created = False
         self._umap_reducer = None
         self._last_n_spikes = None

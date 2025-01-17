@@ -17,10 +17,10 @@ c.TemplateGUI.plugins = [
     'CustomActionPlugin',
     'GoodLabelsPlugin',
     'RawDataFilterPlugin',
-    'SplitShortISI'
-    'Recluster'
+    'SplitShortISI',
+    'Recluster',
     
     'StableMahalanobisDetection',
     'ReclusterUMAP',
-    'ImprovedISIAnalysis',
+    'ImprovedISIAnalysis'
 ]

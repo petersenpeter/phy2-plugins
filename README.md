@@ -32,4 +32,3 @@ pip install pandas numpy scipy scikit-learn umap-learn
 
 ## How to Cite
 [![DOI](https://zenodo.org/badge/126424002.svg)](https://zenodo.org/badge/latestdoi/126424002)
-```

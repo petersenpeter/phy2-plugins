@@ -15,7 +15,7 @@ logger = logging.getLogger('phy')
 
 class StableMahalanobisDetection(IPlugin):
     def __init__(self):
-        super(StableMahalanobisDetectionMingze, self).__init__()
+        super(StableMahalanobisDetection, self).__init__()
         self._shortcuts_created = False
         self.current_distances = None
         self.current_threshold = None

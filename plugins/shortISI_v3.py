@@ -12,7 +12,7 @@ class ImprovedISIAnalysis(IPlugin):
     """More reliable spike analysis using combined metrics"""
 
     def __init__(self):
-        super(ImprovedISIAnalysisMingze, self).__init__()
+        super(ImprovedISIAnalysis, self).__init__()
         self._shortcuts_created = False
 
     def attach_to_controller(self, controller):

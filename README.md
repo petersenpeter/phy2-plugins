@@ -32,6 +32,3 @@ pip install pandas numpy scipy scikit-learn umap-learn
 
 ## How to Cite
 [![DOI](https://zenodo.org/badge/126424002.svg)](https://zenodo.org/badge/latestdoi/126424002)
-```
-
-Is this more what you were looking for? It's much more concise while retaining all the essential information.

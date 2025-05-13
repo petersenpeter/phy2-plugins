@@ -20,10 +20,13 @@ These plugins add additional features to Phy2. Originally created for Phy1 by Pe
 pip install pandas numpy scipy scikit-learn umap-learn
 ```
 
-## Installation 
-1. Place files in `~/.phy/` plugins directory
-2. Install dependencies
-3. Copy 'tempdir.py' to "*YourPhyDirectory*/phy/utils"
+## Installation
+1. Copy the plugin files from the `plugins` directory of this repository to your Phy user configuration directory, inside a `plugins` subfolder.
+   - On Windows, this is typically `C:\Users\<YourUserName>\.phy\plugins`.
+   - If the `plugins` folder doesn't exist, you will need to create it.
+2. Copy other supporting files (e.g., `phy_config.py`, `klustakwik.exe` if used) from the root of this repository to your Phy user configuration directory (e.g., `~/.phy/` or `C:\Users\<YourUserName>\.phy`).
+3. Install dependencies (see [Dependencies](#dependencies) section above).
+4. Copy 'tempdir.py' (from the `plugins` directory of this repository) to `*YourPhyDirectory*/phy/utils`.
 
 ## Authors
 - Original Phy1: Peter Petersen
